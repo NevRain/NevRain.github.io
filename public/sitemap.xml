@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/DanieleBlog/</loc>
+    <loc>http://localhost:1313/blob/</loc>
     <lastmod>2024-09-20T13:36:27+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/DanieleBlog/posts/metropolis-hasting/</loc>
+    <loc>http://localhost:1313/blob/posts/metropolis-hasting/</loc>
     <lastmod>2024-09-20T13:36:27+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/DanieleBlog/posts/</loc>
+    <loc>http://localhost:1313/blob/posts/</loc>
     <lastmod>2024-09-20T13:36:27+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/DanieleBlog/posts/test/</loc>
+    <loc>http://localhost:1313/blob/posts/test/</loc>
     <lastmod>2024-04-27T20:51:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/DanieleBlog/categories/</loc>
+    <loc>http://localhost:1313/blob/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/DanieleBlog/tags/</loc>
+    <loc>http://localhost:1313/blob/tags/</loc>
   </url>
 </urlset>

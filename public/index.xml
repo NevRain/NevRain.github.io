@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Daniele的博客</title>
-    <link>http://localhost:1313/DanieleBlog/</link>
+    <link>http://localhost:1313/blob/</link>
     <description>Recent content on Daniele的博客</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2024 13:36:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/DanieleBlog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blob/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metropolis Hasting采样</title>
-      <link>http://localhost:1313/DanieleBlog/posts/metropolis-hasting/</link>
+      <link>http://localhost:1313/blob/posts/metropolis-hasting/</link>
       <pubDate>Fri, 20 Sep 2024 13:36:27 +0800</pubDate>
-      <guid>http://localhost:1313/DanieleBlog/posts/metropolis-hasting/</guid>
+      <guid>http://localhost:1313/blob/posts/metropolis-hasting/</guid>
       <description>Matropolis-Hasting采样算法 1 问题描述 生成任意概率密度函数$p(x)$的近似采样
 2 原理 先假定目标概率函数是离散的，$x$的每一个取值称为一个状态，所有$p(x)$的取值可以构成概率分布向量。任意给定初始概率分布向量$\pi^0$，向量中的每一个下$\pi_i^0$表示当前处于状态$i$的概率。任意给定状态转移矩阵$P$，矩阵元素$P_{ij}$表示从状态$i$转移到状态$j$的概率。该状态转移矩阵定义了一条马尔可夫链$$\pi^0\rightarrow \pi^1 \rightarrow \pi^2 \rightarrow\cdots\rightarrow\pi^n$$
 $\pi^i$到$\pi^j$的状态转移定义为如下过程$$\pi^j = \pi^i P$$
@@ -32,9 +32,9 @@ Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概�
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/DanieleBlog/posts/test/</link>
+      <link>http://localhost:1313/blob/posts/test/</link>
       <pubDate>Sat, 27 Apr 2024 20:51:36 +0800</pubDate>
-      <guid>http://localhost:1313/DanieleBlog/posts/test/</guid>
+      <guid>http://localhost:1313/blob/posts/test/</guid>
       <description>A Test Page a Test Page</description>
     </item>
   </channel>
