@@ -38,9 +38,9 @@ Metropolis算法的思想是，如果任意确定状态转移矩阵$Q$，则通�
 
 Metropolis-Hasting采样算法是Metropolis采样算法的改进，它将接受概率进行放大，变成$$\pi(i)Q_{ij}\frac{\alpha(i,j)}{\alpha(j,i)} = \pi(j)Q_{ji}$$或者$$\pi(i)Q_{ij} = \pi(j)Q_{ji}\frac{\alpha(j,i)}{\alpha(i,j)}$$
 
-只需要在第4步中，将接受概率修改为$$\alpha'(i,j)=min\{ \frac{p(j)q(j,i)}{p(i)q(i,j)},1 \}$$
+只需要在第4步中，将接受概率修改为$$\alpha'(i,j)=min\left \\{ \frac{p(j)q(j,i)}{p(i)q(i,j)},1 \right \\}$$
 
-进一步的，如果取用的$Q$为对称矩阵，则接受概率修改为$$\alpha'(i,j)=min\{ \frac{p(j)}{p(i)},1 \}$$
+进一步的，如果取用的$Q$为对称矩阵，则接受概率修改为$$\alpha'(i,j)=min\left \\{ \frac{p(j)}{p(i)},1 \right \\}$$
 
 Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概率从而减少被拒绝的次数，而且其最终的接受概率与状态转移矩阵无关，因此可以安全地将其推广到目标概率函数是**连续**的情况（连续的情况下，状态转移矩阵是无穷维）。
 
