@@ -4,8 +4,6 @@ date = 2024-09-20T13:36:27+08:00
 draft = false
 +++
 
-# Matropolis-Hasting采样算法
-
 ### 1 问题描述
 
 生成任意概率密度函数$p(x)$的近似采样
@@ -75,9 +73,9 @@ def MetropolisHastingSampler(TargetFunc f, int sampleNum):
 
 ### A 定理
 
-##### 马尔可夫链收敛定理
+#### 马尔可夫链收敛定理
 
-如果一个非周期马尔科夫链具有概率转移矩阵$P$，且任意两状态联通，则$\operatorname*{lim}_{n\to\infty}P_{ij}^{n} $存在且与初始概率分布无关，记为$\lim_{n\to\infty}P_{ij}^n=\pi_j$，有：
+如果一个非周期马尔科夫链具有概率转移矩阵$P$，且任意两状态联通，则$\lim_{n\to\infty}P_{ij}^{n}$存在且与初始概率分布无关，记为$\lim_{n\to\infty}P_{ij}^n=\pi_j$，有：
 
 - $\lim_{n\to\infty}P^n=\begin{bmatrix}\pi_1&\pi_2&\dots&\pi_j\\\pi_1&\pi_2&\dots&\pi_j\\\pi_1&\pi_2&\dots&\pi_j\end{bmatrix}$
 - $\pi_j=\sum\pi(i)P_{ij}$
@@ -85,6 +83,6 @@ def MetropolisHastingSampler(TargetFunc f, int sampleNum):
 
 其中$\lim_{n\to\infty}P^{n}$的每一行被称为马尔可夫链的稳定分布。
 
-##### 细致平稳条件
+#### 细致平稳条件
 
 如果非周期马尔科夫链的转移矩阵$P$和分布$\pi(x)$对所有的$i,j$满足$\pi(i)P_{ij}=\pi(j)P_{ji}$，则由$P$确定的马尔科夫链的平衡分布就是$\pi(x)$。

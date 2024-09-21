@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/blob/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blob/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Metropolis Hasting采样 | Daniele的博客</title>
 <meta name="keywords" content="">
-<meta name="description" content="Matropolis-Hasting采样算法 1 问题描述 生成任意概率密度函数$p(x)$的近似采样
+<meta name="description" content="1 问题描述 生成任意概率密度函数$p(x)$的近似采样
 2 原理 先假定目标概率函数是离散的，$x$的每一个取值称为一个状态，所有$p(x)$的取值可以构成概率分布向量。任意给定初始概率分布向量$\pi^0$，向量中的每一个下$\pi_i^0$表示当前处于状态$i$的概率。任意给定状态转移矩阵$P$，矩阵元素$P_{ij}$表示从状态$i$转移到状态$j$的概率。该状态转移矩阵定义了一条马尔可夫链$$\pi^0\rightarrow \pi^1 \rightarrow \pi^2 \rightarrow\cdots\rightarrow\pi^n$$
 $\pi^i$到$\pi^j$的状态转移定义为如下过程$$\pi^j = \pi^i P$$
 我们对每一个概率分布向量进行采样就可以得到样本集$x^0,x^1,\cdots,x^n$。
@@ -24,16 +24,16 @@ Metropolis算法的思想是，如果任意确定状态转移矩阵$Q$，则通�
 Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概率从而减少被拒绝的次数，而且其最终的接受概率与状态转移矩阵无关，因此可以安全地将其推广到目标概率函数是连续的情况（连续的情况下，状态转移矩阵是无穷维）。
 3 算法 def MetropolisHastingSampler(TargetFunc f, int sampleNum):skip = 1000 # 任意较大的数，用于收敛到平稳态xi = 0samples = []while(len(samples) &lt; sampleNum):while(True):xj = random() # 相当于矩阵Q的每一行都是均匀的概率分布向量pj = f(xj)pi = f(xi)a = min(pj/pi, 1)r = random()if(r &lt;= a):xi = xjif(skip &gt; 0):skip = skip - 1else:samples.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blob/posts/metropolis-hasting/">
-<link crossorigin="anonymous" href="/blob/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/blob/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blob/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blob/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/blob/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/blob/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/metropolis-hasting/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blob/posts/metropolis-hasting/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/metropolis-hasting/">
 <noscript>
     <style>
         #theme-toggle,
@@ -88,7 +88,7 @@ Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概�
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/blob/" accesskey="h" title="Daniele的博客 (Alt + H)">Daniele的博客</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Daniele的博客 (Alt + H)">Daniele的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -128,8 +128,7 @@ Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概�
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="matropolis-hasting采样算法">Matropolis-Hasting采样算法<a hidden class="anchor" aria-hidden="true" href="#matropolis-hasting采样算法">#</a></h1>
-<h3 id="1-问题描述">1 问题描述<a hidden class="anchor" aria-hidden="true" href="#1-问题描述">#</a></h3>
+  <div class="post-content"><h3 id="1-问题描述">1 问题描述<a hidden class="anchor" aria-hidden="true" href="#1-问题描述">#</a></h3>
 <p>生成任意概率密度函数$p(x)$的近似采样</p>
 <h3 id="2-原理">2 原理<a hidden class="anchor" aria-hidden="true" href="#2-原理">#</a></h3>
 <p>先假定目标概率函数是离散的，$x$的每一个取值称为一个状态，所有$p(x)$的取值可以构成概率分布向量。任意给定初始概率分布向量$\pi^0$，向量中的每一个下$\pi_i^0$表示当前处于状态$i$的概率。任意给定状态转移矩阵$P$，矩阵元素$P_{ij}$表示从状态$i$转移到状态$j$的概率。该状态转移矩阵定义了一条马尔可夫链$$\pi^0\rightarrow \pi^1 \rightarrow \pi^2 \rightarrow\cdots\rightarrow\pi^n$$</p>
@@ -176,15 +175,15 @@ Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概�
     
     return samples
 </code></pre><h3 id="a-定理">A 定理<a hidden class="anchor" aria-hidden="true" href="#a-定理">#</a></h3>
-<h5 id="马尔可夫链收敛定理">马尔可夫链收敛定理<a hidden class="anchor" aria-hidden="true" href="#马尔可夫链收敛定理">#</a></h5>
-<p>如果一个非周期马尔科夫链具有概率转移矩阵$P$，且任意两状态联通，则$\operatorname*{lim}<em>{n\to\infty}P</em>{ij}^{n} $存在且与初始概率分布无关，记为$\lim_{n\to\infty}P_{ij}^n=\pi_j$，有：</p>
+<h4 id="马尔可夫链收敛定理">马尔可夫链收敛定理<a hidden class="anchor" aria-hidden="true" href="#马尔可夫链收敛定理">#</a></h4>
+<p>如果一个非周期马尔科夫链具有概率转移矩阵$P$，且任意两状态联通，则$\lim_{n\to\infty}P_{ij}^{n}$存在且与初始概率分布无关，记为$\lim_{n\to\infty}P_{ij}^n=\pi_j$，有：</p>
 <ul>
 <li>$\lim_{n\to\infty}P^n=\begin{bmatrix}\pi_1&amp;\pi_2&amp;\dots&amp;\pi_j\\pi_1&amp;\pi_2&amp;\dots&amp;\pi_j\\pi_1&amp;\pi_2&amp;\dots&amp;\pi_j\end{bmatrix}$</li>
 <li>$\pi_j=\sum\pi(i)P_{ij}$</li>
 <li>$\pi$是方程$\pi=\pi P$的唯一非负解</li>
 </ul>
 <p>其中$\lim_{n\to\infty}P^{n}$的每一行被称为马尔可夫链的稳定分布。</p>
-<h5 id="细致平稳条件">细致平稳条件<a hidden class="anchor" aria-hidden="true" href="#细致平稳条件">#</a></h5>
+<h4 id="细致平稳条件">细致平稳条件<a hidden class="anchor" aria-hidden="true" href="#细致平稳条件">#</a></h4>
 <p>如果非周期马尔科夫链的转移矩阵$P$和分布$\pi(x)$对所有的$i,j$满足$\pi(i)P_{ij}=\pi(j)P_{ji}$，则由$P$确定的马尔科夫链的平衡分布就是$\pi(x)$。</p>
 
 
@@ -198,7 +197,19 @@ Metropolis-Hasting采样算法的精妙之处不仅在于其放大了接受概�
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/blob/">Daniele的博客</a></span> · 
+        <span>&copy; 2024 <a href="http://localhost:1313/">Daniele的博客</a></span> · 
+
+    <script type="text/javascript">
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
     <span>
         Powered by
